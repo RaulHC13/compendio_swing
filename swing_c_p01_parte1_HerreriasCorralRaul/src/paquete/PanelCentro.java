@@ -35,30 +35,29 @@ public class PanelCentro extends JPanel{
 		
 		panelEJ1.setBorder(line);
 		panelEJ1.setBounds(10,10,840,160);
-//		panelEJ1.setVisible(false);
+		panelEJ1.setVisible(false);
 		
 		panelEJ2.setBorder(line2);
 		panelEJ2.setBounds(10, 170, 840, 160);
-//		panelEJ2.setVisible(false);
+		panelEJ2.setVisible(false);
 		
 		panelEJ3.setBorder(line);
 		panelEJ3.setBounds(10, 330, 840, 160);
-//		panelEJ3.setVisible(false);
+		panelEJ3.setVisible(false);
 		
 		panelEJ4.setBorder(line2);
 		panelEJ4.setBounds(10, 490, 840, 160);
-//		panelEJ4.setVisible(false);
+		panelEJ4.setVisible(false);
 		
 		panelEJ5.setBorder(line);
 		panelEJ5.setBounds(10, 650, 840, 160);
-//		panelEJ5.setVisible(false);
+		panelEJ5.setVisible(false);
 		
 		this.add(panelEJ1);
 		this.add(panelEJ2);		
 		this.add(panelEJ3);
 		this.add(panelEJ4);
 		this.add(panelEJ5);
-		
 	}
 	
 	public void esconderEJ1() {

@@ -34,7 +34,7 @@ public class Panel extends JPanel {
 		panelInferior = new PanelInferior();
 		panelCentro = new PanelCentro();
 
-		//listeners();
+		listeners();
 		
 		Border bevelLowered = BorderFactory.createBevelBorder(BevelBorder.LOWERED, Color.BLUE, Color.GREEN, Color.BLACK, Color.RED);
 		panelLogo.setBorder(bevelLowered);

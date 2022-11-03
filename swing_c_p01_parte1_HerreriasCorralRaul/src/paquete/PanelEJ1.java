@@ -16,10 +16,8 @@ import javax.swing.JPanel;
 
 public class PanelEJ1 extends JPanel {
 
-	private BoxLayout principal;
 	private JLabel label;
 	private JCheckBox cbN, cbC;
-	private PanelCentro pc;
 
 	private boolean negrita = false, cursiva = false;
 
@@ -30,7 +28,7 @@ public class PanelEJ1 extends JPanel {
 		label = new JLabel();
 		label.setText("En un lugar de la Mancha, de cuyo nombre ...");
 		label.setFont(new Font("", Font.PLAIN, 20));
-		label.setBounds(4, 40, 600, 20);
+		label.setBounds(4, 40, 600, 40);
 
 		cbN = new JCheckBox();
 		cbC = new JCheckBox();

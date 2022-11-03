@@ -28,10 +28,10 @@ public class Ventana extends JFrame {
 		int altoPantalla = tamañoPantalla.height;
 		int anchoPantalla = tamañoPantalla.width;
 		
-		int nuevoAlto = (int) Math.round(altoPantalla/1.1);
+		int nuevoAlto = (int) Math.round(altoPantalla/1.08);
 		
 		this.setSize(anchoPantalla/2, nuevoAlto);
-		this.setLocation(anchoPantalla/4, altoPantalla/4);
+		this.setLocation(anchoPantalla/4, altoPantalla/40);
 		
 		Image icono = miPantalla.getImage("recursos/ventana.jpg");
 		

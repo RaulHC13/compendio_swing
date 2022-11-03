@@ -27,7 +27,7 @@ public class PanelEJ2 extends JPanel{
 		label = new JLabel();
 		label.setText("En un lugar de la Mancha, de cuyo nombre ...");
 		label.setFont(new Font("", Font.PLAIN, 20));
-		label.setBounds(4, 80, 600, 20);
+		label.setBounds(4, 60, 600, 40);
 		
 		GraphicsEnvironment graphicsEnv = GraphicsEnvironment.getLocalGraphicsEnvironment();
 		String[] nombres = graphicsEnv.getAvailableFontFamilyNames();

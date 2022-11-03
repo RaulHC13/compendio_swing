@@ -5,18 +5,46 @@
  */
 package paquete;
 
-import javax.swing.BoxLayout;
+import java.awt.Font;
+
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JSlider;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
 public class PanelEJ4 extends JPanel{
 
-	private BoxLayout principal;
+	private JLabel label;
+	private JSlider slider;
 	
 	public PanelEJ4() {
 		
-		principal = new BoxLayout(this, BoxLayout.X_AXIS);
+		this.setLayout(null);
 		
-		this.setLayout(principal);
+		label = new JLabel();
+		label.setText("En un lugar de la Mancha, de cuyo nombre ...");
+		label.setFont(new Font("", Font.PLAIN, 25));
+		label.setBounds(4, 40, 800, 140);
 		
+		slider = new JSlider();
+		slider.setMajorTickSpacing(10);
+		slider.setMinorTickSpacing(2);
+		slider.setMinimum(10);
+		slider.setMaximum(40);
+		slider.setPaintLabels(true);
+		slider.setValue(25);
+		slider.setBounds(300,10,200,60);
+
+		slider.addChangeListener(new ChangeListener() {
+			@Override
+			public void stateChanged(ChangeEvent e) {
+				int valor = slider.getValue();
+				label.setFont(new Font("", Font.PLAIN, valor));
+			}
+		});
+		
+		this.add(label);
+		this.add(slider);
 	}
 }
