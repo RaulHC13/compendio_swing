@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 
 public class PanelInferior extends JPanel {
 
-	private JButton botonEJ;
+	public JButton botonEJ;
 	
 	public PanelInferior() {
 

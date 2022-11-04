@@ -7,11 +7,15 @@ package paquete;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
-import java.util.concurrent.TimeUnit;
+import java.util.ArrayList;
 
 import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JToggleButton;
 import javax.swing.border.BevelBorder;
@@ -24,6 +28,9 @@ public class Panel extends JPanel {
 	private PanelInferior panelInferior;
 	private PanelCentro panelCentro;
 	private JToggleButton btn1, btn2, btn3, btn4, btn5;
+	private JButton btnLista;
+	private int contador = 0;
+	private ArrayList<String> lista;
 	
 	public Panel() {
 		
@@ -52,6 +59,7 @@ public class Panel extends JPanel {
 		btn3 = panelBox.btn3;
 		btn4 = panelBox.btn4;
 		btn5 = panelBox.btn5;
+		btnLista = panelInferior.botonEJ;
 		
 		btn1.addItemListener(new ItemListener() {
 			@Override
@@ -59,8 +67,11 @@ public class Panel extends JPanel {
 				
 				if (btn1.isSelected()) {
 					panelCentro.mostrarEJ1();
+					contador++;
+					lista.add("Ejercicio 1");
 				} else if (!btn1.isSelected()) {
 					panelCentro.esconderEJ1();
+					contador--;
 				}}});
 		
 		btn2.addItemListener(new ItemListener() {
@@ -69,8 +80,11 @@ public class Panel extends JPanel {
 				
 				if (btn2.isSelected()) {
 					panelCentro.mostrarEJ2();
+					contador++;
+					lista.add("Ejercicio 1");
 				} else if (!btn2.isSelected()) {
 					panelCentro.esconderEJ2();
+					contador--;
 				}}});
 		
 		btn3.addItemListener(new ItemListener() {
@@ -79,8 +93,10 @@ public class Panel extends JPanel {
 				
 				if (btn3.isSelected()) {
 					panelCentro.mostrarEJ3();
+					contador++;
 				} else if (!btn3.isSelected()) {
 					panelCentro.esconderEJ3();
+					contador--;
 				}}});
 		
 		btn4.addItemListener(new ItemListener() {
@@ -89,8 +105,10 @@ public class Panel extends JPanel {
 				
 				if (btn4.isSelected()) {
 					panelCentro.mostrarEJ4();
+					contador++;
 				} else if (!btn4.isSelected()) {
 					panelCentro.esconderEJ4();
+					contador--;
 				}}});
 		
 		btn5.addItemListener(new ItemListener() {
@@ -99,8 +117,23 @@ public class Panel extends JPanel {
 				
 				if (btn5.isSelected()) {
 					panelCentro.mostrarEJ5();
+					contador++;
 				} else if (!btn5.isSelected()) {
 					panelCentro.esconderEJ5();
+					contador--;
 				}}});
+		
+		btnLista.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				String string = String.format("Ejercicios activos: %d"
+						+ "\n Los ejercicios activos son: "
+						+ "\n ", contador);
+				
+				JOptionPane.showMessageDialog(null, "Operación realizada - 2 Argumentos", 
+						"Ejercicios activos", JOptionPane.PLAIN_MESSAGE);
+			}
+		});
 	}
 }

@@ -42,10 +42,10 @@ public class PanelEJ3 extends JPanel {
 		label.setFont(new Font("", Font.PLAIN, 18));
 		label.setBounds(4, 40, 800, 60);
 
-		rb1.setBounds(240, 130, 80, 20);
-		rb2.setBounds(320, 130, 80, 20);
-		rb3.setBounds(400, 130, 80, 20);
-		rb4.setBounds(480, 130, 100, 20);
+		rb1.setBounds(210, 130, 90, 20);
+		rb2.setBounds(310, 130, 90, 20);
+		rb3.setBounds(410, 130, 90, 20);
+		rb4.setBounds(500, 130, 110, 20);
 
 		rb1.addActionListener(new ActionListener() {
 			@Override
