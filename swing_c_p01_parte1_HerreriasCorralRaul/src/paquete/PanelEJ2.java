@@ -33,7 +33,7 @@ public class PanelEJ2 extends JPanel{
 		String[] nombres = graphicsEnv.getAvailableFontFamilyNames();
 		
 		combo = new JComboBox<String>(nombres);
-		combo.setBounds(2,4,836,28);
+		combo.setBounds(2,4,846,28);
 		
 		combo.addItemListener(new ItemListener() {
 			@Override

@@ -33,7 +33,7 @@ public class Ventana extends JFrame {
 		this.setSize(anchoPantalla/2, nuevoAlto);
 		this.setLocation(anchoPantalla/4, altoPantalla/40);
 		
-		Image icono = miPantalla.getImage(this.getClass().getResource("/recursos/amogus.png"));
+		Image icono = miPantalla.getImage(this.getClass().getResource("/recursos/icono.png"));
 		
 		border = new Panel();
 		

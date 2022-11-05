@@ -8,6 +8,7 @@ package paquete;
 import java.awt.Color;
 
 import javax.swing.BorderFactory;
+import javax.swing.BoxLayout;
 import javax.swing.JPanel;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.Border;
@@ -22,7 +23,7 @@ public class PanelCentro extends JPanel{
 	private PanelBox panelbox;
 	
 	public PanelCentro() {
-		this.setLayout(null);
+		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		
 		panelEJ1 = new PanelEJ1();
 		panelEJ2 = new PanelEJ2();
@@ -38,23 +39,18 @@ public class PanelCentro extends JPanel{
 		Border ej5 = BorderFactory.createBevelBorder(BevelBorder.LOWERED, Color.CYAN, Color.GREEN, Color.WHITE, Color.CYAN);
 		
 		panelEJ1.setBorder(ej1);
-		panelEJ1.setBounds(10,10,840,160);
 		panelEJ1.setVisible(false);
 		
 		panelEJ2.setBorder(ej3);
-		panelEJ2.setBounds(10, 170, 840, 160);
 		panelEJ2.setVisible(false);
 		
 		panelEJ3.setBorder(ej2);
-		panelEJ3.setBounds(10, 330, 840, 160);
 		panelEJ3.setVisible(false);
 		
 		panelEJ4.setBorder(ej4);
-		panelEJ4.setBounds(10, 490, 840, 160);
 		panelEJ4.setVisible(false);
 		
 		panelEJ5.setBorder(ej5);
-		panelEJ5.setBounds(10, 650, 840, 160);
 		panelEJ5.setVisible(false);
 		
 		this.add(panelEJ1);
