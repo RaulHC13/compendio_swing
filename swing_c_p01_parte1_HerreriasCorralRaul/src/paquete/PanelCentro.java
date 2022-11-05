@@ -9,6 +9,7 @@ import java.awt.Color;
 
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
+import javax.swing.border.BevelBorder;
 import javax.swing.border.Border;
 
 public class PanelCentro extends JPanel{
@@ -30,26 +31,29 @@ public class PanelCentro extends JPanel{
 		panelEJ5 = new PanelEJ5();
 		panelbox = new PanelBox();
 		
-		Border line = BorderFactory.createLineBorder(Color.RED, 2);
-		Border line2 = BorderFactory.createLineBorder(Color.GREEN, 2);
+		Border ej1 = BorderFactory.createLineBorder(Color.GRAY, 2);
+		Border ej2 = BorderFactory.createLineBorder(Color.RED, 2);
+		Border ej3 = BorderFactory.createLineBorder(Color.GREEN, 2);
+		Border ej4 = BorderFactory.createBevelBorder(BevelBorder.RAISED, Color.ORANGE, Color.GREEN, Color.BLACK, Color.YELLOW);
+		Border ej5 = BorderFactory.createBevelBorder(BevelBorder.LOWERED, Color.CYAN, Color.GREEN, Color.WHITE, Color.CYAN);
 		
-		panelEJ1.setBorder(line);
+		panelEJ1.setBorder(ej1);
 		panelEJ1.setBounds(10,10,840,160);
 		panelEJ1.setVisible(false);
 		
-		panelEJ2.setBorder(line2);
+		panelEJ2.setBorder(ej3);
 		panelEJ2.setBounds(10, 170, 840, 160);
 		panelEJ2.setVisible(false);
 		
-		panelEJ3.setBorder(line);
+		panelEJ3.setBorder(ej2);
 		panelEJ3.setBounds(10, 330, 840, 160);
 		panelEJ3.setVisible(false);
 		
-		panelEJ4.setBorder(line2);
+		panelEJ4.setBorder(ej4);
 		panelEJ4.setBounds(10, 490, 840, 160);
 		panelEJ4.setVisible(false);
 		
-		panelEJ5.setBorder(line);
+		panelEJ5.setBorder(ej5);
 		panelEJ5.setBounds(10, 650, 840, 160);
 		panelEJ5.setVisible(false);
 		

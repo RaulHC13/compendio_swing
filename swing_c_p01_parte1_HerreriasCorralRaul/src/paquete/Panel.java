@@ -12,6 +12,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.util.ArrayList;
+import java.util.Collections;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -35,6 +36,8 @@ public class Panel extends JPanel {
 	public Panel() {
 		
 		this.setLayout(new BorderLayout());
+		
+		lista = new ArrayList<String>();
 		
 		panelLogo = new PanelLogo();
 		panelBox = new PanelBox();
@@ -72,6 +75,7 @@ public class Panel extends JPanel {
 				} else if (!btn1.isSelected()) {
 					panelCentro.esconderEJ1();
 					contador--;
+					lista.remove("Ejercicio 1");
 				}}});
 		
 		btn2.addItemListener(new ItemListener() {
@@ -81,10 +85,11 @@ public class Panel extends JPanel {
 				if (btn2.isSelected()) {
 					panelCentro.mostrarEJ2();
 					contador++;
-					lista.add("Ejercicio 1");
+					lista.add("Ejercicio 2");
 				} else if (!btn2.isSelected()) {
 					panelCentro.esconderEJ2();
 					contador--;
+					lista.remove("Ejercicio 2");
 				}}});
 		
 		btn3.addItemListener(new ItemListener() {
@@ -94,9 +99,11 @@ public class Panel extends JPanel {
 				if (btn3.isSelected()) {
 					panelCentro.mostrarEJ3();
 					contador++;
+					lista.add("Ejercicio 3");
 				} else if (!btn3.isSelected()) {
 					panelCentro.esconderEJ3();
 					contador--;
+					lista.remove("Ejercicio 3");
 				}}});
 		
 		btn4.addItemListener(new ItemListener() {
@@ -106,9 +113,11 @@ public class Panel extends JPanel {
 				if (btn4.isSelected()) {
 					panelCentro.mostrarEJ4();
 					contador++;
+					lista.add("Ejercicio 4");
 				} else if (!btn4.isSelected()) {
 					panelCentro.esconderEJ4();
 					contador--;
+					lista.remove("Ejercicio 4");
 				}}});
 		
 		btn5.addItemListener(new ItemListener() {
@@ -118,20 +127,26 @@ public class Panel extends JPanel {
 				if (btn5.isSelected()) {
 					panelCentro.mostrarEJ5();
 					contador++;
+					lista.add("Ejercicio 5");
 				} else if (!btn5.isSelected()) {
 					panelCentro.esconderEJ5();
 					contador--;
+					lista.remove("Ejercicio 5");
 				}}});
 		
 		btnLista.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
-				String string = String.format("Ejercicios activos: %d"
-						+ "\n Los ejercicios activos son: "
-						+ "\n ", contador);
+				Collections.sort(lista);
+				String listaFormateada = lista.toString().replace(",","\n")
+						.replace("[", "").replace("]", "").replace(" E", "E");
 				
-				JOptionPane.showMessageDialog(null, "Operación realizada - 2 Argumentos", 
+				String string = String.format("Ejercicios activos: %d"
+						+ "\nLos ejercicios activos son:"
+						+ "\n%s",contador, listaFormateada);
+				
+				JOptionPane.showMessageDialog(null, string, 
 						"Ejercicios activos", JOptionPane.PLAIN_MESSAGE);
 			}
 		});
